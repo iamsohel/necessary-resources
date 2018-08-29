@@ -1,0 +1,71 @@
+// get request
+
+function httpGet($endPoint, $params, $bearer = false)
+    {
+        $ch = curl_init();
+        $data = '';
+        foreach ($params as $k => $v) {
+            $data .= $k . '=' . $v . '&';
+        }
+        //echo $this->host . $endPoint;
+        $data = rtrim($data, '&');
+        if (!empty($params))
+            curl_setopt($ch, CURLOPT_URL, $this->host . $endPoint . '?' . $data);
+        else
+            curl_setopt($ch, CURLOPT_URL, $this->host . $endPoint);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        if ($bearer) {
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('authorization: Bearer' . $this->accessToken));
+        }
+        $output = curl_exec($ch);
+
+        curl_close($ch);
+        return json_decode($output, true);
+    }
+
+
+    // post request
+
+    function httpPost($endPoint, $params, $bearer = false)
+    {
+        $postData = '';
+        //create name value pairs seperated by &
+        foreach ($params as $k => $v) {
+            $postData .= $k . '=' . $v . '&';
+        }
+        $postData = rtrim($postData, '&');
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $this->host . $endPoint);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_POST, count($params));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+        if ($bearer) {
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('authorization: Bearer' . $this->accessToken));
+        }
+        $output = curl_exec($ch);
+        curl_close($ch);
+        return $output;
+
+    }
+
+
+// Generate curl request
+$session = curl_init($request);
+// Tell PHP not to use SSLv3 (instead opting for TLS)
+curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
+curl_setopt($session, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $sendgrid_apikey));
+// Tell curl to use HTTP POST
+curl_setopt ($session, CURLOPT_POST, true);
+// Tell curl that this is the body of the POST
+curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
+// Tell curl not to return headers, but do return the response
+curl_setopt($session, CURLOPT_HEADER, false);
+curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+
+// obtain response
+$response = curl_exec($session);
+curl_close($session);
+
+// print everything out
+print_r($response);
