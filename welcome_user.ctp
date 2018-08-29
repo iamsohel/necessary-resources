@@ -1,13 +1,13 @@
 <table width="660" border="0" align="center" cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif">
     <tr style="background-color: #0a1f30;">
         <td width="25%">
-            <?= $this->Html->image('http://stockgitter.com/img/Welcome/stockgitter-welcome.png', ['fullBase' => true, 'style' => 'width: 70px; height: auto;']); ?>
+            <?= $this->Html->image('http:', ['fullBase' => true, 'style' => 'width: 70px; height: auto;']); ?>
         </td>
         <td width="50%" style="text-align: center;">
-            <a href="https://stockgitter.com/JMD">JMD Stocks</a>
-            <a href="https://stockgitter.com/USD">USD Stocks</a>
-            <a href="https://stockgitter.com/USD/ipo">IPO's</a>
-            <a href="https://stockgitter.com/USD/news">News</a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
         </td>
         <td width="25%">
             
@@ -24,7 +24,7 @@
 
     <tr>
         <td colspan="3">
-            <?= $this->Html->image('http://stockgitter.com/img/Welcome/welcome.png', ['style' => 'width: 100%; height: auto;']); ?>
+            <?= $this->Html->image('', ['style' => 'width: 100%; height: auto;']); ?>
         </td>
     </tr>
 
@@ -42,7 +42,7 @@
     <tr>
         <td style="width: 220px;">
             <p style="text-align: center; font-size: 14px; font-weight: bold;">Market Research</p>
-            <center><?= $this->Html->image('http://stockgitter.com/img/Welcome/market.png', ['fullBase' => true, 'style' => 'width: 130px; height: auto; max-height: 86px']); ?></center>
+            <center><?= $this->Html->image('', ['fullBase' => true, 'style' => 'width: 130px; height: auto; max-height: 86px']); ?></center>
             <ul style="padding: 0px; width: 90%;">
                 <li>
                     View company <b>events</b> & Join AGM meetings
@@ -61,7 +61,7 @@
 
         <td style="width: 220px;">
             <p style="text-align:center; font-size: 14px; font-weight: bold;">Trade Simulation</p>
-            <center><?= $this->Html->image('http://stockgitter.com/img/Welcome/trade-simulation.png', ['fullBase' => true, 'style' => 'width: 130px; height: auto; max-height: 86px']); ?></center>
+            <center><?= $this->Html->image('', ['fullBase' => true, 'style' => 'width: 130px; height: auto; max-height: 86px']); ?></center>
             <ul style="padding: 0px; width: 90%; margin-left: 10px;">
                 <li>
                     Add stocks to your <b>watchlist</b> to automatically trade.
@@ -83,7 +83,7 @@
 
         <td style="width: 220px;">
             <p style="text-align:center; font-size: 14px; font-weight: bold;">Chat with traders</p>
-            <center><?= $this->Html->image('http://stockgitter.com/img/Welcome/chat.png', ['fullBase' => true, 'style' => 'width: 130px; height: auto; max-height: 86px']); ?></center>
+            <center><?= $this->Html->image('', ['fullBase' => true, 'style' => 'width: 130px; height: auto; max-height: 86px']); ?></center>
             <ul style="padding: 0px; width: 80%; margin-left: 20px;">
                 <li>
                     Ask Penny our smartest Financial Assistant to answer any financial market questions.
@@ -104,10 +104,10 @@
         <td style="width: 220px;">
             <p>
                 <center>
-                    <a href="https://www.facebook.com/StockGitter/" style="display: table-cell;">
-                        <?= $this->Html->image('http://stockgitter.com/img/Welcome/facebook_icon.png', ['fullBase' => true, 'style' => 'width: 32px; border-radius: 50%; background-color: white;']); ?>
+                    <a href="" style="display: table-cell;">
+                        <?= $this->Html->image('', ['fullBase' => true, 'style' => 'width: 32px; border-radius: 50%; background-color: white;']); ?>
                     </a>
-                    <a href="https://www.facebook.com/StockGitter/" style="margin-left: 5px;font-size: 10px;display: table-cell;vertical-align: middle; text-decoration: none; color: #222;">
+                    <a href="" style="margin-left: 5px;font-size: 10px;display: table-cell;vertical-align: middle; text-decoration: none; color: #222;">
                         FRIEND ON FACEBOOK
                     </a>
                 <center>
@@ -118,8 +118,8 @@
         <td style="width: 220px;">
             <p>
                 <center>
-                    <a href="https://twitter.com/stockgitter" style="display: table-cell;"><?= $this->Html->image('http://stockgitter.com/img/Welcome/twitter-icon.png', ['fullBase' => true, 'style' => 'width: 32px; border-radius: 50%; background-color: white;']); ?></a>
-                    <a href="https://twitter.com/stockgitter" style="margin-left: 5px;font-size: 10px;display: table-cell;vertical-align: middle; text-decoration: none; color: #222;">
+                    <a href="" style="display: table-cell;"><?= $this->Html->image('http://stockgitter.com/img/Welcome/twitter-icon.png', ['fullBase' => true, 'style' => 'width: 32px; border-radius: 50%; background-color: white;']); ?></a>
+                    <a href="" style="margin-left: 5px;font-size: 10px;display: table-cell;vertical-align: middle; text-decoration: none; color: #222;">
                         FOLLOW ON TWITTER
                     </a>
                 <center>
@@ -130,8 +130,8 @@
         <td style="width: 220px;">
             <p>
                 <center>
-                    <a href="https://www.instagram.com/stockgitter/" style="display: table-cell;"><?= $this->Html->image('http://stockgitter.com/img/Welcome/instagram.png', ['fullBase' => true, 'style' => 'width: 32px; border-radius: 50%; background-color: white;']); ?></a>
-                    <a href="https://www.instagram.com/stockgitter/" style="margin-left: 5px;font-size: 10px;display: table-cell;vertical-align: middle; text-decoration: none; color: #222;">
+                    <a href="" style="display: table-cell;"><?= $this->Html->image('http://stockgitter.com/img/Welcome/instagram.png', ['fullBase' => true, 'style' => 'width: 32px; border-radius: 50%; background-color: white;']); ?></a>
+                    <a href="" style="margin-left: 5px;font-size: 10px;display: table-cell;vertical-align: middle; text-decoration: none; color: #222;">
                         Instagram
                     </a>
                 <center>
@@ -153,7 +153,7 @@
         <td>
             <p style="text-align: center; font-weight: bold; color: #76797e; margin-bottom: -10px;">
                 Our mailing address is: <br />
-                <a href="mailto:info@stockitter.com" style="text-align: center; font-weight: none; margin-top: -10px; text-decoration: none; color: #273231;">info@stockitter.com</a>
+                <a href="" style="text-align: center; font-weight: none; margin-top: -10px; text-decoration: none; color: #273231;">info@stockitter.com</a>
             </p>
         </td>
     </tr>
