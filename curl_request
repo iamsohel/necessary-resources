@@ -81,6 +81,21 @@ function httpGet($endPoint, $params, $bearer = false)
          return $output;
 
     }
+    
+    function httpDelete($endPoint, $params, $bearer = false)
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $this->host . $endPoint);
+        if ($bearer) {
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer' . ' eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiY29tcGFueV9pZCI6MSwiYXBpX2tleSI6Ijc4ZjVlNzZiLWM3YzYtMTFlOC1hZTA0LTA2MjdmNzdhNDE1NCIsImFwaV9zZWNyZXQiOiIzM2VjOTYwNTg2NDY4NGRjMDA2YzlmNWEyNzBmZTg0ZSIsInNpdGVfdXJsIjoiYXBwLmNvbSIsImRhdGUiOiIyMDE4LTEwLTA0IDA2OjE1OjIyIn0.1Nt-wTFxKo_4Z53gpdrM_yAWa0Gr_uFY843Gi5RFv_I'));
+        }
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+        $output = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        return $output;
+    }
 
 
 // Generate curl request
