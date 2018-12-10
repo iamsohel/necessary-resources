@@ -8,3 +8,21 @@ CREATE TRIGGER insert_guid BEFORE INSERT ON tablename FOR EACH ROW SET NEW.colou
            https://drive.google.com/drive/folders/16FSqHwNfw5Z6kp4PNlBPabU4dJPYO9_T
  react : https://coursehunters.net/course/mastering-react-mosh-hamedani
  How to install docker : https://www.youtube.com/watch?v=WRVe1lc3Mdw
+                                                                                        
+ 
+.conf
+    <VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        ServerName coi.l.com
+        DocumentRoot /var/www/html/project_name/
+ 
+    <Directory /var/www/html/project_name>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
