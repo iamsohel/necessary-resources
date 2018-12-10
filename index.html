@@ -26,3 +26,14 @@ CREATE TRIGGER insert_guid BEFORE INSERT ON tablename FOR EACH ROW SET NEW.colou
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+
+We can use the a2ensite tool to enable each of our sites like this:
+# sudo a2ensite example.com.conf
+
+When you are finished, you need to restart Apache to make these changes take effect:
+# sudo systemctl restart apache2
+
+In other documentation, you may also see an example using the service command:
+# sudo service apache2 restart
+
+127.0.0.1   localhost /hosts file add 
