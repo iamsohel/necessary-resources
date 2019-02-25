@@ -1,14 +1,17 @@
 
-## Setup
+## vs code extension list
 
-Make sure to follow all these steps exactly as explained below.
+1. Auto Import ES6 and TS JSX TSX
+2. Auto Rename Tag
+3. Ayu
+4. Code Spell Checker
+5. Color Hightlight
+6. GitLens
+7. Live Server
+8. Live Sass Compiler
+9. One Dark Pro
+10. Rainbow Brackets
+11. Simple React Snippets
+12.Vs code icons
+13. W3C Validation
 
-### Install MongoDB
-
-Once you install MongoDB, make sure it's running. You will find database file in database_file folder
-
-### Install the Dependencies
-
-Next, from the project folder, install the dependencies:
-
-    npm install
