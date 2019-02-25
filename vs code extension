@@ -1,0 +1,14 @@
+
+## Setup
+
+Make sure to follow all these steps exactly as explained below.
+
+### Install MongoDB
+
+Once you install MongoDB, make sure it's running. You will find database file in database_file folder
+
+### Install the Dependencies
+
+Next, from the project folder, install the dependencies:
+
+    npm install
