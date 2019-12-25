@@ -1,0 +1,7 @@
+npm install grunt-sync --save-dev --save-exact
+npm install ajv --save-dev --save-exact
+uncommenting these lines
+// // Load Grunt plugin from the node_modules/ folder.
+// grunt.loadNpmTasks('grunt-sync');
+from the ./tasks/config/sync.js
+hopefully, it will fix this problem
