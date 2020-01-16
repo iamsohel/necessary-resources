@@ -1,0 +1,81 @@
+<div class="col-md-offset-3 col-md-6">
+    <form method="post" action="/create-sub-department">
+        <h2 class="form-signin-heading" style="margin-bottom: 20px;">Create Sub Department</h2>
+        <div class="panel col-md-12 center">
+            <div class="form-group row">
+                <label for="track_start_time">
+                    <%= __('Concern') %>:</label>
+                <select class="input_custom form-control" id="dropdown-concern" name="concern_id" required="required">
+                    <option value="" disabled selected>Select Concern</option>
+                    <% for(var i=0; i < concerns.length; i++) {  %>
+                    <option value="<%= concerns[i].id  %>"><%= concerns[i].name  %>
+                    </option>
+                    <% } %>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="track_start_time">
+                    <%= __('Department') %>:</label>
+                <select class="input_custom form-control" id="department_id" name="department_id" required="required">
+                    <option value="" disabled selected>Select Department</option>
+                    <!-- <% for(var i=0; i < departments.length; i++) {  %>
+                    <option value="<%= departments[i].id  %>"><%= departments[i].name  %>
+                    </option>
+                    <% } %> -->
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="name">
+                    <%= __('Sub Department Name') %>:</label>
+                <input type="text" required="required" class="input_custom form-control" id="name" placeholder="Name"
+                    name="name">
+            </div>
+
+            <div class="form-group row">
+                <button class="btn btn-primary" type="submit">Submit</button>
+                <a class="btn btn-danger" type="button" href="/departments">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#dropdown-concern').on('change', function () {
+            var val = $(this).val();
+            console.log(val);
+            $.ajax({
+                url: "/get-department-list/" + val,
+                type: "GET",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    console.log(result)
+                    // [
+                    //     {
+                    //         "id": "5e1f019e4e3415550cb75203",
+                    //         "name": "Business Development"
+                    //     },
+                    //     {
+                    //         "id": "5e1f01ac4e3415550cb75204",
+                    //         "name": "Sales & Marketting"
+                    //     },
+                    //     {
+                    //         "id": "5e1f01b94e3415550cb75205",
+                    //         "name": "Engineering"
+                    //     },
+                        
+                    //     ]
+                    $.each(result, function (data, value) {
+                        console.log("value: ", value)
+                        $("#department_id").append($("<option></option>").val(value.id).html(value.name));
+                    })
+                },
+                error: function (errormessage) {
+                    alert(errormessage.responseText);
+                }
+            });
+        });
+    });
+
+</script>
