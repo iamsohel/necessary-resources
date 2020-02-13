@@ -1,0 +1,8 @@
+Refresh the package database.
+
+apt-get update
+Install the apache2-utils package to get access to ApacheBench.
+
+apt-get install apache2-utils
+
+ab -n <number of request> -c <numebr of concurrent request> http://localhost:3000/
