@@ -1,0 +1,9 @@
+
+https://github.com/thedevsaddam/docgen-bin
+
+download the binary and extract.
+export the postman collection at same folder in docgen
+
+run command: ./docgen build -i sl.postman_collection -o index.html
+
+here sl.postman_collection is the filename
