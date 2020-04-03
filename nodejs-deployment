@@ -38,6 +38,27 @@ pm2 stop app
 pm2 logs (Show log stream)
 pm2 flush (Clear logs)
 
+
+----------------
+app.config.js
+------------------
+module.exports = {
+  apps: [
+    {
+      name: 'My Node.js App',
+      script: './index.js',
+      instances: 0,
+      exec_mode: 'cluster',
+      watch: true,
+      env: {
+        NODE_ENV: 'production',
+        PORT: '3001'
+      }
+    }
+  ]
+};
+
+--------------
 # To make sure app starts when reboot
 pm2 startup ubuntu
 ```
