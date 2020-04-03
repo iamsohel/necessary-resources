@@ -58,6 +58,7 @@ module.exports = {
   ]
 };
 
+pm2 start app.config.js
 --------------
 # To make sure app starts when reboot
 pm2 startup ubuntu
