@@ -24,6 +24,16 @@ server {
 }
 
 ------------------------
+for reactjs
+ root /var/www/mydroneop/client.mydroneop.com/build;
+      
+        index index.html index.htm index.nginx-debian.html;
+        server_name http://35.236.234.141;
+        location / {
+                 try_files $uri /index.html;
+                #try_files $uri $uri/ =404;
+        }
+-----------------
 
 # Default server configuration
 server {
