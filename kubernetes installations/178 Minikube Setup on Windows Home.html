@@ -1,0 +1,16 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>178 Minikube Setup on Windows Home</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p>These instructions are for setting up and installing Minikube and its dependencies for use on Windows Home editions that are using Docker Toolbox.</p><h4><strong>Install Kubectl</strong></h4><p>1. Create a new directory that you will move your kubectl binaries into. A good place would be <code>C:\Users\YOURUSERNAME\bin</code> since these path variables will also be made available to the "Docker Quick Start"&nbsp;terminal.</p><p>2. Download the latest kubectl executable from the link on the Kubernetes doc page:</p><p><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows" rel="noopener noreferrer" target="_blank">https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-windows</a></p><p>3. Move this downloaded .exe file into the bin directory you created.</p><p>4. Use Windows search to type “env” or “edit” then select “Edit the system environment variables”</p><p>5. In the System Properties dialog box, click “Environment Variables”.</p><p>6. In User Variables click on the “Path” Variable and then click “Edit”</p><p>7. Click “New” and then type <code>C:\Users\YOURUSERNAME\bin</code></p><p>8. Click "OK"</p><p>9. Restart your terminal and test by typing kubectl into it. You should get the basic commands and help menu printed back to your screen. If this doesn't work try restarting your machine.</p><h4><strong>Install Minikube</strong></h4><p>VirtualBox should already be installed from setting up Docker Toolbox, so we wont need to install this again.</p><p>To install Minikube we can use the standalone installer, which is available by clicking this link:</p><p><a href="https://github.com/kubernetes/minikube/releases/latest/download/minikube-installer.exe" rel="noopener noreferrer" target="_blank">https://github.com/kubernetes/minikube/releases/latest/download/minikube-installer.exe</a></p><p>After the installer finishes, restart your terminal and test your installation:</p><p><code>minikube status</code></p><p>Running <code>minikube start</code> will provision the VirtualBox machines and startup your Kubernetes services.</p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>

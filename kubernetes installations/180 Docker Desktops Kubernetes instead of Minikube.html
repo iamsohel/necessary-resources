@@ -1,0 +1,16 @@
+<html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>180 Docker Desktops Kubernetes instead of Minikube</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><p>These instructions are for using Docker Desktop's built-in Kubernetes instead of minikube which is discussed in the lectures.</p><h4><strong>Windows Pro / Enterprise</strong></h4><p>1. Right click the Docker icon in the Windows Toolbar</p><p>2. Click Settings</p><p>3. Click "Kubernetes" in the dialog box sidebar (If you don't see Kubernetes listed in the sidebar you may have Windows Containers enabled instead of Linux Containers - you can toggle this setting by right clicking the Docker toolbar icon and clicking "Switch to Linux Containers")</p><p>4. Check the “Enable Kubernetes” box</p><p>5. Click "Apply"</p><p>6. Click Install to allow the cluster installation (This may take a while). If on Windows, you may get a dialog box warning from Windows Defender about Docker's vpnkit. Check the boxes to allow it to communicate on your network and click "Allow Access"</p><h4><strong>macOS</strong></h4><p>1. Click the Docker icon in the top macOS toolbar</p><p>2. Click Preferences</p><p>3. Click "Kubernetes" in the dialog box menu</p><p>4. Check the “Enable Kubernetes” box</p><p>5. Click "Apply"</p><p>6. Click Install to allow the cluster installation (This may take a while).</p><h4><strong>Usage</strong></h4><p>Going forward, any minikube commands run in the lecture videos can be ignored. Also, instead of the IP&nbsp;address used in the video lectures when using minikube, we use localhost.</p><p>For example, in the first project where we deploy our simple React app, using minikube we would visit:</p><p>192.168.99.101:31515</p><p>Instead, when using Docker Desktop's Kubernetes, we would visit:<strong> localhost:31515</strong></p><p>Also, you can skim through the discussion about needing to use the local Docker node in the "Multiple Docker Installations" and "Why Mess with Docker in the Node" lectures (187-189), this only applies to minikube users.</p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>
