@@ -120,3 +120,31 @@ certbot renew --dry-run
 ```
 
 Now visit https://yourdomain.com and you should see your Node app
+
+
+server block 
+--------------
+
+server {
+  listen 80 ;
+  listen [::]:80 ;
+  #root /var/www/mydroneop/client.mydroneop.com/build; 
+  root /var/www/druto-sheba/twilio-vd-app/build;
+  # Add index.php to the list if you are using PHP
+  index index.html index.htm index.nginx-debian.html;
+  server_name drutosheba-calls.ergov.com; 
+  location / {
+          # First attempt to serve request as file, then
+          # as directory, then fall back to displaying a 404.
+           try_files $uri /index.html;
+          #try_files $uri $uri/ =404;
+  }
+  location /token {
+  proxy_pass http://localhost:8081; #whatever port your app runs on
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection 'upgrade';
+  proxy_set_header Host $host;
+  proxy_cache_bypass $http_upgrade;
+  }
+}
