@@ -1,0 +1,4 @@
+crontab -l 
+
+*/5 * * * * wget -qO- https://example.com/cron/slot-release &> /dev/null  --------> every 5 minute
+*/5 * * * * wget -qO- https://example.com/cron/appointment-expire &> /dev/null
