@@ -1,0 +1,7 @@
+https://itnext.io/performance-tips-for-mongodb-mongoose-190732a5d382
+
+ console.time("q");
+  User.find(
+
+  );
+console.timeEnd("q");
