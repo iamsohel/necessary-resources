@@ -1,4 +1,5 @@
 python -m venv env_name
+--for windows only
 env_name\Scripts\activate.bat
 
 
