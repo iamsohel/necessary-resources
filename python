@@ -10,6 +10,12 @@ pipenv install opencv-python
 
 
 pipenv install django
+
+after install django
+run pip freeze and get the install packages
+make a requirements.txt file and list down the packages
+
+
 pipenv shell
 django-admin startproject vidly .
 python manage.py startapp listings
