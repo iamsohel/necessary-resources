@@ -3,8 +3,17 @@ python -m venv env_name
 env_name\Scripts\activate.bat
 
 
-
+pip list
 pip install pipenv
+
+pipenv= pip + virtualenv
+
+pipenv install requests
+pipenv --venv
+pipenv shell
+pipenv graph --list of all installed packeage
+pipenv update --outdated --list out the updated package
+pipenv update package_name
 
 pipenv install opencv-python
 
