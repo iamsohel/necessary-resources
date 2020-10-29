@@ -68,3 +68,7 @@ python manage.py runserver
 pipenv install djangorestframework
 pipenv shell
 pipenv install django-cors-headers
+
+Environment Variable in django
+-------------------------------
+os.environ.get('variable_name')
