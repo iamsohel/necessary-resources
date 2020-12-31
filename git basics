@@ -1,6 +1,38 @@
+--command--
+git branch
+git branch -r -- all branch show
+git remote -v --show origin
+
+git commit --amend -m "merge this code to last commit"
+git checkout - (go previous branch)
+git checkout -b newBranch
+git branch -D branchName
+git diff
+
 stash - temporary save 
+
+git stash save "some change"
+git stash list --(view all stash)
+git stash apply --(go back to last unfinished work)
+git stash apply stash@{1} --get specific stash
+git stash drop stash@{1} -- remove specific stash
+git stash pop -- remove lastes 
+
+
+
 reset (hard, soft, mixed)
 cherry-pick, revert (specific commit code back)
+
+git cherry-pick logHash  --- get specific code 
+git revert logHash --undo/reverse  a specific commit
+
+--conflicts--
+
+git checkout --theirs-- .   --keep server code
+git checkout --ours-- .   -- keep my code
+keep from both, do manually
+
+
 rebasing - history changed 
 tag, release - 
 
