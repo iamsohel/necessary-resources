@@ -1,0 +1,5 @@
+
+
+--- ssh-keygen
+and copy content from id_rsa.pub file and paste into github/gitlab ssh keys section
+

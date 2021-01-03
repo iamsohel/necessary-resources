@@ -1,0 +1,74 @@
+python -m venv env_name
+--for windows only
+env_name\Scripts\activate.bat
+
+
+pip list
+pip install pipenv
+
+pipenv= pip + virtualenv
+
+pipenv install requests
+pipenv --venv
+pipenv shell
+pipenv graph --list of all installed packeage
+pipenv update --outdated --list out the updated package
+pipenv update package_name
+
+pipenv install opencv-python
+
+
+pipenv install django
+
+after install django
+run pip freeze and get the install packages
+make a requirements.txt file and list down the packages
+
+
+pipenv shell
+django-admin startproject vidly .
+python manage.py startapp listings
+
+--------------
+python manage.py help
+python manage.py createsuperuser
+python manage.py runserver
+
+ python manage.py collectstatic(make folder named static(anythings) inside root folder)
+ python manage.py migrate
+ python manage.py makemigrations
+
+ ----------------
+ postgres 
+ -----------
+ pip install psycopg2
+ pip install psycopg2-binary
+ pip install Pillow (for images)
+ -----------
+ postgresdb
+ postgres app
+ pgadmin
+
+ -------------------
+  pip install pylint-django
+ .pylintrc file ->> load-plugins=pylint-django
+
+ ------------------------------
+ for mysql
+ --------------
+ pip install mysqlclient
+ 'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'mydb',
+        'USER': 'root',
+        'PASSWORD': 'YOUR_DB_PASSWORD',
+        'HOST': 'localhost',   
+        'PORT': '3306',
+
+---------------REST------
+pipenv install djangorestframework
+pipenv shell
+pipenv install django-cors-headers
+
+Environment Variable in django
+-------------------------------
+os.environ.get('variable_name')
