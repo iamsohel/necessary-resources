@@ -1,7 +1,7 @@
 --command--
 git branch
-git branch -r -- all branch show
-git remote -v --show origin
+git branch -r        -- all branch show
+git remote -v         --show origin
 
 git commit --amend -m "merge this code to last commit"
 git checkout - (go previous branch)
