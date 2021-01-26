@@ -3,6 +3,9 @@ git branch
 git branch -r        -- all branch show
 git remote -v         --show origin
 
+To show users from all branches (not only the ones in the current branch) you have to add --all flag:
+git shortlog -sne --all
+
 git commit --amend -m "merge this code to last commit"
 git checkout - (go previous branch)
 git checkout -- (clear all uncommit code)
