@@ -1,10 +1,11 @@
 --command--
 git branch
-git branch -r -- all branch show
-git remote -v --show origin
+git branch -r        -- all branch show
+git remote -v         --show origin
 
 git commit --amend -m "merge this code to last commit"
 git checkout - (go previous branch)
+git checkout -- (clear all uncommit code)
 git checkout -b newBranch
 git branch -D branchName
 git diff
@@ -21,6 +22,7 @@ git stash pop -- remove lastes
 
 
 reset (hard, soft, mixed)
+git reset --hard (logHashID) goto this commit
 cherry-pick, revert (specific commit code back)
 
 git cherry-pick logHash  --- get specific code 
