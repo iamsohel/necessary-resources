@@ -38,8 +38,11 @@ git checkout --ours-- .   -- keep my code
 keep from both, do manually
 
 
-rebasing - history changed 
+rebasing - history changed
+in feature branch if you want to get latest code from master
+git rebase master ==> it will updated all updated master code to feature branch
 tag, release - 
+
 
 
 https://docs.google.com/presentation/d/19kE079Aut6SqVbNQq7QcJjOh0uyNHPpYki3uFGPjlxY/edit#slide=id.g4451636dee_1_18
