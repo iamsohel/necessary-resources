@@ -147,7 +147,7 @@
 - git remote # Shows remote repos
 - git remote add upstream url # Adds a new remote called upstream
 - git remote rm upstream # Remotes upstream 
-### Rewriting History
+# Rewriting History
 ### Undoing commits
 - git reset --soft HEAD^ # Removes the last commit, keeps changed staged
 - git reset --mixed HEAD^ # Unstages the changes as well
