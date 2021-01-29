@@ -40,7 +40,8 @@ keep from both, do manually
 
 rebasing - history changed
 in feature branch if you want to get latest code from master
-git rebase master ==> it will updated all updated master code to feature branch
+git rebase master ==> from master to feature || it will updated all updated master code to feature branch
+git rebase feature ==> from feature to master
 tag, release - 
 
 
