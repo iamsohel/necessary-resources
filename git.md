@@ -27,6 +27,8 @@
 ### Removing files
 - git rm file1.js # Removes from working directory and staging area
 - git rm --cached file1.js # Removes from staging area only
+### gitignore- https://github.com/github/gitignore/blob/master/Node.gitignore
+
 ### Renaming or moving files
 - git mv file1.js file1.txt
 ### Viewing the staged/unstaged changes
