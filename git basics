@@ -32,7 +32,7 @@ git stash pop -- remove lastes
 
 
 
-reset (hard, soft, mixed)
+reset (hard, soft, mixed)(only do if you don't push you code.| only your local working directory)
 git reset --hard (logHashID) goto this commit
 cherry-pick, revert (specific commit code back)
 
