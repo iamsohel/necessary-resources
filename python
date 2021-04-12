@@ -5,6 +5,8 @@ env_name\Scripts\activate.bat
 sourc env_name/bin/activate
 deactivate
 
+pip3 freeze > requirements.txt
+
 
 pip list
 pip install pipenv
