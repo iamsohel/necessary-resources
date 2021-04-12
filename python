@@ -5,6 +5,7 @@ env_name\Scripts\activate.bat
 sourc env_name/bin/activate
 deactivate
 
+run inside virtual env
 pip3 freeze > requirements.txt
 
 
