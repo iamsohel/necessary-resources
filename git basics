@@ -1,7 +1,18 @@
+# config
+-git config --global user.name "Sohel Rana" 
+-git config --global user.name "sohelcuetcse11@gmail.com"
+-git config --global core.editor "code --wait"  //default code editor
+-git config --global -e  //open config file in the default code editor
+
+
+
 --command--
 git branch
 git branch -r        -- all branch show
 git remote -v         --show origin
+
+To show users from all branches (not only the ones in the current branch) you have to add --all flag:
+git shortlog -sne --all
 
 git commit --amend -m "merge this code to last commit"
 git checkout - (go previous branch)
@@ -21,7 +32,7 @@ git stash pop -- remove lastes
 
 
 
-reset (hard, soft, mixed)
+reset (hard, soft, mixed)(only do if you don't push you code.| only your local working directory)
 git reset --hard (logHashID) goto this commit
 cherry-pick, revert (specific commit code back)
 
@@ -35,8 +46,12 @@ git checkout --ours-- .   -- keep my code
 keep from both, do manually
 
 
-rebasing - history changed 
+rebasing - history changed
+in feature branch if you want to get latest code from master
+git rebase master ==> from master to feature || it will updated all updated master code to feature branch
+git rebase feature ==> from feature to master
 tag, release - 
+
 
 
 https://docs.google.com/presentation/d/19kE079Aut6SqVbNQq7QcJjOh0uyNHPpYki3uFGPjlxY/edit#slide=id.g4451636dee_1_18

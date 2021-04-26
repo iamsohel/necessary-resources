@@ -1,1 +1,9 @@
 how to install docker 18.04 -- https://www.hostinger.com/tutorials/how-to-install-and-use-docker-on-ubuntu/
+
+docker build -t dockersrana/posts .   -> build image
+docker run image_id or image_tag
+docker run -it iamge_id or tag [cmd][sh]
+docker ps -> all running containers
+docker exec -it containerid [cmd][sh]
+docker logs container id
+

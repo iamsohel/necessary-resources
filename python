@@ -1,6 +1,12 @@
 python -m venv env_name
 --for windows only
 env_name\Scripts\activate.bat
+--linux/mac
+sourc env_name/bin/activate
+deactivate
+
+run inside virtual env
+pip3 freeze > requirements.txt
 
 
 pip list
