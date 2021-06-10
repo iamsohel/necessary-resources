@@ -6,4 +6,6 @@ docker run -it iamge_id or tag [cmd][sh]
 docker ps -> all running containers
 docker exec -it containerid [cmd][sh]
 docker logs container id
+docker logs -f container id [follow mode]
+docker run -d -p browserPort:hostPort --name c1 imagename
 
