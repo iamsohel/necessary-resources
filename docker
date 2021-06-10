@@ -8,4 +8,6 @@ docker exec -it containerid [cmd][sh]
 docker logs container id
 docker logs -f container id [follow mode]
 docker run -d -p browserPort:hostPort --name c1 imagename
+docker container rm -f $(docker container ls -aq) -> delete all container
+docker image rm -f $(docker image ls -q) -> delete all images
 
