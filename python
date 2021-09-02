@@ -1,6 +1,6 @@
-python -m venv env_name
+python -m venv env
 --for windows only
-env_name\Scripts\activate.bat
+.\env\Scripts\activate
 --linux/mac
 sourc env_name/bin/activate
 deactivate
