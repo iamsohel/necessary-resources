@@ -22,7 +22,7 @@ $ mongo
 > 
 > exit
 > 
-$ sudo nano /etc/mongodb.conf
+$ sudo nano /etc/mongod.conf
 
 auth = true
 
@@ -40,4 +40,17 @@ $ mongo -u "lefa" -p "lefapw" --authenticationDatabase  "lefa"
 > 
 > exit
 
+Edit your MongoDB config file. On Ubuntu:
 
+sudo vim /etc/mongod.conf
+
+Look for the net line and comment out the bindIp line under it, which is currently limiting MongoDB connections to localhost:
+Warning: do not comment out the bindIp line without enabling authorization. Otherwise you will be opening up the whole internet to have full admin access to all mongo databases on your MongoDB server!
+
+# network interfaces
+net:
+  port: 27017
+#  bindIp: 127.0.0.1  <- comment out this line
+Scroll down to the #security: section and add the following line. Make sure to un-comment the security: line.
+security:
+  authorization: 'enabled'
