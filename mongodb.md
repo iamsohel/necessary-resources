@@ -22,11 +22,11 @@ $ mongo
 > 
 > exit
 > 
-$ sudo vim /etc/mongodb.conf
+$ sudo nano /etc/mongodb.conf
 
 auth = true
 
-$ sudo systemctl restart mongodb
+$ sudo systemctl restart mongod
 
 $ mongo -u "root" -p "rootpw" --authenticationDatabase  "admin"
 
