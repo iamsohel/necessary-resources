@@ -51,8 +51,11 @@ Warning: do not comment out the bindIp line without enabling authorization. Othe
 
 # network interfaces
 net:
+
   port: 27017
+  
   bindIp: 0.0.0.0  
+  
 Scroll down to the #security: section and add the following line. Make sure to un-comment the security: line.
 security:
   authorization: 'enabled'
