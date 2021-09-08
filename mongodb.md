@@ -22,24 +22,21 @@ db.createUser(
   }
 )
 
-
-> db.createUser({  user: "root",  pwd: "rootpw",  roles: [ "root" ]  })  // root user can do anything
 > 
 > use lefa
 > 
 > db.lefa.save( {name:"test"} )
 > 
 > db.lefa.find()
+
+  db.createUser({ user: "user", pwd: "pass", roles: [ { role: "readWrite", db: "dbName" } ] })
 > 
 > show dbs
 > 
-> db.createUser({  user: "lefa",  pwd: "lefapw",  roles: [ { role: "dbOwner", db: "lefa" } ]  }) // admin of a db
+
 > 
 > exit
 > 
-$ sudo nano /etc/mongod.conf
-
-auth = true
 
 $ sudo systemctl restart mongod
 
