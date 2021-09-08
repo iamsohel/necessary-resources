@@ -7,7 +7,22 @@ $ mongo
 > show dbs
 > 
 > use admin
-> 
+
+
+db.createUser(
+
+  {
+  
+    user: "myAdmin",
+    
+    pwd: 'pass', 
+    
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]
+    
+  }
+)
+
+
 > db.createUser({  user: "root",  pwd: "rootpw",  roles: [ "root" ]  })  // root user can do anything
 > 
 > use lefa
