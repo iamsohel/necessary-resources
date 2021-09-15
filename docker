@@ -15,3 +15,4 @@ docker image rm -f $(docker image ls -q) -> delete all images
 # Enter the container
 $ docker exec -it <container id> /bin/bash
 
+docker-compose down --rmi all
