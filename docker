@@ -8,6 +8,10 @@ docker exec -it containerid [cmd][sh]
 docker logs container id
 docker logs -f container id [follow mode]
 docker run -d -p browserPort:hostPort --name c1 imagename
+docker run -p 49160:8080 -d <your username>/node-web-app
 docker container rm -f $(docker container ls -aq) -> delete all container
 docker image rm -f $(docker image ls -q) -> delete all images
+
+# Enter the container
+$ docker exec -it <container id> /bin/bash
 
