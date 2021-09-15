@@ -1,3 +1,4 @@
+https://docs.google.com/presentation/d/1XnsV-ls42h0v5AxfrAhLQu9gB5aow6sH1H8d6jYfqyM/edit?usp=sharing
 how to install docker 18.04 -- https://www.hostinger.com/tutorials/how-to-install-and-use-docker-on-ubuntu/
 
 docker build -t dockersrana/posts .   -> build image
