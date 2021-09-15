@@ -16,3 +16,6 @@ docker image rm -f $(docker image ls -q) -> delete all images
 $ docker exec -it <container id> /bin/bash
 
 docker-compose down --rmi all
+
+
+docker exec -it -u sohel container_id bash
