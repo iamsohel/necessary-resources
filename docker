@@ -13,10 +13,14 @@ docker run -p 49160:8080 -d <your username>/node-web-app
 docker container rm -f $(docker container ls -aq) -> delete all container
 docker image rm -f $(docker image ls -q) -> delete all images
 
+--delele unused image--
+docker container prune
+docker image prune
+--remove image--
+docker image rm image_name
+
 # Enter the container
 $ docker exec -it <container id> /bin/bash
 
 docker-compose down --rmi all
-
-
 docker exec -it -u sohel container_id bash
