@@ -15,3 +15,9 @@ CREATE USER sohel  WITH CREATED LOGIN ENCRYPTED PASSWORD 'admin';
 CREATE DATABASE test;
 
 GRANT ALL PRIVILEGES ON DATABASE test TO sohel;
+
+DROP DATABASE test;
+
+\q
+
+psql -U sohel -h localhost
