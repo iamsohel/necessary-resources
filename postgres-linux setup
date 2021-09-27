@@ -1,1 +1,17 @@
 
+sudo apt install postgresql
+
+sudo -u postgres psql
+
+ALTER USER postgres PASSWORD 'root';
+
+\du  //list of user
+\l  //list of user 
+
+//create user
+
+CREATE USER sohel  WITH CREATED LOGIN ENCRYPTED PASSWORD 'admin';
+
+CREATE DATABASE test;
+
+GRANT ALL PRIVILEGES ON DATABASE test TO sohel;
