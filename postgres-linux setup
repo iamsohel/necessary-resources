@@ -21,3 +21,5 @@ DROP DATABASE test;
 \q
 
 psql -U sohel -h localhost
+
+https://codingpub.dev/ubuntu-install-postgresql-and-pgadmin/
