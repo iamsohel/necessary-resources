@@ -1,1 +1,9 @@
 https://www.youtube.com/watch?v=8h4FoWK7tIA&t=199s
+
+kubectl get pods
+kubectl get service
+kubectl exec -it pod_name command_name 
+kubectl log pod_name
+kubectl describe pod pod_name
+kubectl delete pod pod_name
+kubectl apply -f filename
