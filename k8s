@@ -7,3 +7,16 @@ kubectl log pod_name
 kubectl describe pod pod_name
 kubectl delete pod pod_name
 kubectl apply -f filename
+
+
+update the latest code: 
+
+method 1
+
+after change the code, rebuild the image and change the image version no in deployment file. and apply the updated deployment file
+kubectl apply -f filename
+
+method 2
+
+
+
