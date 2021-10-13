@@ -84,3 +84,99 @@ sudo ufw allow 'Nginx Full'
 scp -i <path to .pem file> <path to sample-movies.bulk file> ubuntu@<dns name>:sample-movies.bulk
 
 sudo curl -XPOST http://localhost:9200/_bulk?pretty --data-binary @sample-movies.bulk -H "Content-Type: application/json"
+
+
+http://localhost:9200/index_name/_search
+
+app.get("/search", async (req, res) => {
+       const {body }: any = await client.search({
+        index: 'universs',
+        body: {
+            "query": {
+                //match: { universityName: req.query.keyword}
+               //====
+                //match_all: {}
+                //====
+                // multi_match : {
+                //     query:    req.query.keyword,
+                //     fields: [ "university", "city", "state" ] 
+                //     }
+
+                    //=====
+                        // "bool": {
+                        // "should": [
+                        //     {
+                        //     "match": {
+                        //         "state":  req.query.keyword,
+                        //     }
+                        //     },
+                        //     {
+                        //     "match": {
+                        //         "city":  req.query.keyword,
+                        //     }
+                        //     },
+                        //      {
+                        //     "match": {
+                        //         "universityName":  "ru",
+                        //     }
+                        //     },
+                        //     {
+                        //     "match": {
+                        //         "country":  "bangladesh",
+                        //     }
+                        //     }
+                        // ]
+                        // }
+                            //====
+                            'bool': {
+                               'should': [
+                                    {'nested': {
+                                        'path': 'courses',
+                                        'query': {
+                                            'bool': {
+                                                'should': [{'match_phrase': {'courses.courseName': {'query': req.query.keyword}}}]
+                                            }  
+                                        }
+                                    }},
+                                     {
+                                    "match": {
+                                        "universityName":  req.query.keyword
+                                      }
+                                    },
+                                   {
+                                    "match": {
+                                        "country":  req.query.keyword
+                                     }
+                                    },
+                                    {
+                                    "match": {
+                                        "city":  req.query.keyword
+                                      }
+                                    },
+                                    {
+                                    "match": {
+                                        "state":  req.query.keyword
+                                      }
+                                    },
+                                     {
+                                    "match": {
+                                        "specializationName":  req.query.keyword
+                                      }
+                                    },
+                                    {
+                                    "match": {
+                                        "courseLevelName":  req.query.keyword
+                                      }
+                                    },
+                                    
+                               ]
+                           }
+
+             }
+        }
+        })
+        console.log(body.hits.hits)
+        res.send(body.hits.hits)
+})
+
+
