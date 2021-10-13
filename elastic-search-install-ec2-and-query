@@ -1,3 +1,5 @@
+query docs:  https://coralogix.com/blog/42-elasticsearch-query-examples-hands-on-tutorial/
+
 ssh -i <path to .pem file> ubuntu@<dns name>
 
 sudo apt-get update
