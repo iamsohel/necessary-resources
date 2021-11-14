@@ -40,3 +40,52 @@ docker cp file.txt container_id:/app
 
 --copy file from container to current dir
 dockeer cp container_id:/app/data.txt .
+
+
+version: '3.9'
+
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - 4001:80
+    volumes:
+      - static_volume:/home/app/static
+      - media_volume:/home/app/media
+    depends_on:
+      - api
+    restart: "on-failure"
+  api:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    command: >
+      bash -c "python manage.py collectstatic --no-input --clear
+      && python manage.py migrate
+      && gunicorn flow_code_api.wsgi:application --bind 0.0.0.0:8000"
+    volumes:
+      - ./app/:/home/app/
+      - static_volume:/home/app/static
+      - media_volume:/home/app/media
+    env_file:
+      - ./.env.prod
+
+    expose:
+      - 8000
+    restart: "on-failure"
+    depends_on:
+      - db
+  db:
+    image: postgres:13.0-alpine
+    ports:
+      - 4002:5432
+    volumes:
+      - postgres_prod_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.env.prod.db
+    restart: "on-failure"
+
+volumes:
+  postgres_prod_data:
+  static_volume:
+  media_volume:
