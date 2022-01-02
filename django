@@ -1,3 +1,41 @@
 
 
 export pdf, excel, csv ->>https://www.youtube.com/watch?v=ai9J71DlLhk
+
+.\env\Scripts\activate
+docker-compose up -d  
+docker-compose up -d --build
+docker-compose down 
+docker-compose down -v
+docker-compose -f docker-compose.prod.yml down -v
+docker-compose -f docker-compose.prod.yml up -d --build
+docker-compose -f docker-compose.prod.yml exec api python manage.py migrate --noinput
+docker-compose -f docker-compose.prod.yml exec api python manage.py collectstatic --no-input --clear
+docker-compose exec api python manage.py createsuperuser
+docker-compose exec api python manage.py startapp playground
+python manage.py startapp listings
+
+docker-compose exec db psql --username=postgres  --dbname=flowcode_dev
+
+\l
+\c hello_django_dev  (db_name)
+\dt 
+\q
+
+python manage.py dumpdata > data.json
+python manage.py shell
+
+from django.contrib.contenttypes.models import contenttypes
+ContentType.objects.all().delete()
+python manage.py loaddata data.json
+
+
+sudo docker-compose -f docker-compose.dev.yml  up --build -d
+sudo docker-compose -f docker-compose.dev.yml down 
+
+sudo docker-compose -f docker-compose.stage.yml  up --build -d
+sudo docker-compose -f docker-compose.stage.yml down 
+
+docker-compose -f docker-compose.dev.yml exec api python manage.py test
+
+
