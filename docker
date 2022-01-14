@@ -92,3 +92,47 @@ volumes:
   postgres_prod_data:
   static_volume:
   media_volume:
+
+
+DB BACKUP
+=========
+
+ pgbackups:
+    container_name: Backup
+    image: prodrigestivill/postgres-backup-local
+    restart: always
+    volumes:
+      - ./backup:/backups
+    links:
+      - db:db
+    depends_on:
+      - db
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_DB=${DB_NAME} 
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_EXTRA_OPTS=-Z9 --schema=public --blobs
+      - SCHEDULE=@every 0h30m00s
+      - BACKUP_KEEP_DAYS=7
+      - BACKUP_KEEP_WEEKS=4
+      - BACKUP_KEEP_MONTHS=6
+      - HEALTHCHECK_PORT=81
+      
+# copy dump into container
+docker cp local/path/to/db.dump CONTAINER_ID:/db.dump
+
+# shell into container
+docker exec -it CONTAINER_ID bash
+
+# restore it from within
+pg_restore -U postgres -d DB_NAME --no-owner -1 /db.dump
+
+
+Backup your databases
+
+docker exec -t your-db-container pg_dumpall -c -U postgres > dump_`date +%d-%m-%Y"_"%H_%M_%S`.sql
+
+Restore your databases
+
+cat your_dump.sql | docker exec -i your-db-container psql -U postgres
