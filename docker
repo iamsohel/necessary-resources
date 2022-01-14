@@ -8,8 +8,10 @@ docker build -t dockersrana/posts .   -> build image
 docker run image_id or image_tag
 docker run -it iamge_id or tag [cmd][sh]
 docker ps -> all running containers
+dcoker ps -a -> all container including stopped
 docker exec -it containerid [cmd][sh]
 docker logs container id
+docker logs --tail=50 container-id
 docker logs -f container id [follow mode]
 docker stop container_id
 docker start container_id ,[run -> start a new container, start- start a stoped container]
