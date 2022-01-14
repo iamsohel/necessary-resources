@@ -139,3 +139,5 @@ cat your_dump.sql | docker exec -i your-db-container psql -U postgres -d dbname
 
 When restoring the database, make sure you add -d your-db-name to the restore command if your database isn't named postgres
 
+docker exec -t  8006a025ac04 pg_dump -U postgres -d flowcode_dev >db_dump.sql 
+
