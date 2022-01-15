@@ -6,6 +6,7 @@ https://mherman.org/presentations/dockercon-2018/#5 ---BEST Practice
 
 docker build -t dockersrana/posts .   -> build image
 docker run image_id or image_tag
+docker run -d -p 6379:6379 redis
 docker run -it iamge_id or tag [cmd][sh]
 docker ps -> all running containers
 dcoker ps -a -> all container including stopped
