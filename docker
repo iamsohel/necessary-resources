@@ -142,3 +142,21 @@ When restoring the database, make sure you add -d your-db-name to the restore co
 
 docker exec -t  8006a025ac04 pg_dump -U postgres -d flowcode_dev >db_dump.sql 
 
+
+
+periodically delete used images/container/netwok
+--------------------------------------------------
+
+cd /etc/cron.daily
+sudo nano docker-prune
+
+paste
+-------
+
+#!/bin/bash
+docker system prune -af  --filter "until=$((7*24))h"    -- 7 days
+
+permission
+-----
+sudo chmod +x /etc/cron.daily/docker-prune
+
