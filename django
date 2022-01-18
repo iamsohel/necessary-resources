@@ -25,7 +25,7 @@ docker-compose exec db psql --username=postgres  --dbname=flowcode_dev
 python manage.py dumpdata > data.json
 python manage.py shell
 
-from django.contrib.contenttypes.models import contenttypes
+from django.contrib.contenttypes.models import ContentType
 ContentType.objects.all().delete()
 python manage.py loaddata data.json
 
