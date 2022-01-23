@@ -4,7 +4,7 @@
 
 ## 3. Install Node/NPM
 ```
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 
 sudo apt install nodejs
 
@@ -111,6 +111,8 @@ Add the following to the location part of the server block
 ```
 # Check NGINX config
 sudo nginx -t
+
+sudo  ufw allow 4003
 
 # Restart NGINX
 sudo service nginx restart
