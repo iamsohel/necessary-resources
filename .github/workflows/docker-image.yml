@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - 'mains'
+      - 'masters'
 
 jobs:
   docker:
@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: sohelixora/pme_backend:latest-1
+          tags: sohelixora/pme2_backend:${{ github.run_number }}
