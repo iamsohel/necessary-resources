@@ -18,5 +18,6 @@ kubectl apply -f filename
 
 method 2
 
+kubectl rollout restart deployment client-depl
 
 
