@@ -8,7 +8,11 @@ kubectl describe pod pod_name
 kubectl delete pod pod_name
 kubectl apply -f filename
 
+#namespace
+kubectl -n namespace_name apply -f filename
 
+#portforward
+kubectl -n namespace_name port-forward pod_name port_number
 update the latest code: 
 
 method 1
