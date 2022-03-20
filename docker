@@ -1,6 +1,13 @@
 https://docs.google.com/presentation/d/1XnsV-ls42h0v5AxfrAhLQu9gB5aow6sH1H8d6jYfqyM/edit?usp=sharing
 how to install docker 18.04 -- https://www.hostinger.com/tutorials/how-to-install-and-use-docker-on-ubuntu/
 
+sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+$ which docker-compose
+/usr/local/bin/docker-compose
+$ docker-compose -v
+docker-compose version 1.27.4, build 40524192
+
 
 https://mherman.org/presentations/dockercon-2018/#5 ---BEST Practice
 
