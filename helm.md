@@ -1,10 +1,8 @@
 helm create mychars
 
-helm lint ./mycharts
+helm lint
 
-helm install --dry-run --debug ./my-charts/ --generate-name
-
-helm install exmple ./mycharts/ --set service.type=Nodeport
+helm install my-charts .
 
 helm list
 helm uninstall exmple
