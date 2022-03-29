@@ -12,6 +12,17 @@ sudo apt install nodejs
 node --version
 ```
 
+### Lets encrypt
+
+sudo apt install letsencrypt
+sudo systemctl status certbot.timer
+apt install python3-certbot-nginx
+sudo certbot --nginx --agree-tos --preferred-challenges http -d domain-name.com
+
+https://serverspace.io/support/help/how-to-get-lets-encrypt-ssl-on-ubuntu/
+
+
+
 ## 4. Clone your project from Github
 There are a few ways to get your files on to the server, I would suggest using Git
 ```
