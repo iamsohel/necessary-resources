@@ -1,9 +1,7 @@
 # Setup a Node.js project with Typescript, ESLint, Prettier, Husky
-![1_D8Wwwce8wS3auLAiM3BQKA](https://user-images.githubusercontent.com/11991333/72227393-f67be200-3593-11ea-8510-7bec5d98afc6.jpeg)
 
 > Starting a personal node project could be easy; starting a team node project could be challenging. 
 
-I am a developer currently working in iXora Solution.
 
 In my experience, common mistakes developer make when starting a projects are:
 
@@ -28,16 +26,44 @@ After adding the dev dependency, create a `ts.config.json` file under the root o
 
 ```json
 {
-  "compilerOptions":
-    {
-      "target": "es2018",
-      "module": "commonjs",
-      "outDir": "dist",
-      "sourceMap": true,
-    },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "downlevelIteration": true,
+    "types": ["express"]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+  ]
 }
+
 
 ```
 
@@ -82,22 +108,8 @@ yarn add eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser --dev
 
 ESLint does not support typescript out of the box. Fortunately we are able to add the typescript support by these two packages `@typescript-eslint/eslint-plugin` `@typescript-eslint/parser` thanks to the ESLint team's modular design.
 
-The next thing is to create a `.eslintrc` file. It does not have a file extension but the default is `JSON` format:
 
-```json
-{
-  "parser": "@typescript-eslint/parser",
-  "extends": [
-      "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-      "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
-      "plugin:prettier/recommended"
-  ],
-  "parserOptions": { "ecmaVersion": 2018, "sourceType": "module" },
-  "rules": {}
-}
-```
-
-.eslintrc.js
+.eslintrc.js for node.js
 
 ```
 module.exports = {
@@ -153,6 +165,82 @@ module.exports = {
     },
   };
   
+
+```
+
+.eslintrc.js for reactjs
+
+```
+module.exports = {
+  settings: {
+    react: {
+      pragma: 'React',
+      version: '17.0.2',
+    },
+  },
+  env: {
+    browser: true,
+    es6: true,
+    jest: true,
+    node: true,
+    webextensions: true,
+  },
+  parser: '@typescript-eslint/parser',
+  plugins: ['react', 'react-hooks', 'prettier', 'jest'],
+  extends: [
+    'react-app',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  ignorePatterns: [],
+  rules: {
+    'prettier/prettier': [
+      'warn',
+      {
+        singleQuote: true,
+        trailingComma: 'all',
+        printWidth: 120,
+        tabWidth: 2,
+        semi: true
+      },
+    ],
+    'react/jsx-uses-vars': 2,
+    'react/no-children-prop': 0,
+    'react/prop-types': 0,
+    'react/display-name': 0,
+    'react/no-unknown-property': 0,
+    'react/no-deprecated': 0,
+    'react/jsx-key': 0,
+    'react-hooks/exhaustive-deps': 0,
+    'react/no-unescaped-entities': 0,
+    'no-template-curly-in-string': 0,
+    'import/no-anonymous-default-export': 0,
+    'no-console': 0,
+    eqeqeq: ['error', 'always'],
+    'jsx-a11y/anchor-is-valid': 0,
+    'no-unreachable': 2,
+    // 'no-var': 'error',
+    'no-import-assign': 0,
+    'no-prototype-builtins': 0,
+    'object-curly-spacing': ['warn', 'always'],
+    '@typescript-eslint/no-redeclare': 0,
+    '@typescript-eslint/camelcase': 0,
+    '@typescript-eslint/no-var-requires': 0,
+    '@typescript-eslint/no-use-before-define': 0,
+    '@typescript-eslint/explicit-member-accessibility': 0,
+    '@typescript-eslint/no-empty-interface': 0,
+    '@typescript-eslint/no-empty-function': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+    '@typescript-eslint/ban-ts-comment': 0,
+    '@typescript-eslint/no-explicit-any': 2,
+    '@typescript-eslint/ban-types': 0,
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars-experimental': 'warn',
+    'no-unused-vars': 'off',
+    'no-control-regex': 0,
+  },
+};
 
 ```
 
