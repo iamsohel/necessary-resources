@@ -97,6 +97,65 @@ The next thing is to create a `.eslintrc` file. It does not have a file extensio
 }
 ```
 
+.eslintrc.js
+
+```
+module.exports = {
+    env: {
+      es6: true,
+      jest: true,
+      node: true,
+    },
+    parser: '@typescript-eslint/parser',
+    plugins: ['prettier', 'jest'],
+    extends: [
+      'eslint:recommended',
+      'plugin:@typescript-eslint/recommended',
+    ],
+    parserOptions: { "ecmaVersion": 2018, "sourceType": "module" },
+    ignorePatterns: [],
+    rules: {
+      'prettier/prettier': [
+        'warn',
+        {
+          singleQuote: true,
+          trailingComma: 'all',
+          printWidth: 120,
+          tabWidth: 2,
+          semi: true
+        },
+      ],
+      'no-template-curly-in-string': 0,
+      'import/no-anonymous-default-export': 0,
+      'no-console': 0,
+      eqeqeq: ['error', 'always'],
+      'jsx-a11y/anchor-is-valid': 0,
+      'no-unreachable': 2,
+      // 'no-var': 'error',
+      'no-import-assign': 0,
+      'no-prototype-builtins': 0,
+      'object-curly-spacing': ['warn', 'always'],
+      '@typescript-eslint/no-redeclare': 0,
+      '@typescript-eslint/camelcase': 0,
+      '@typescript-eslint/no-var-requires': 0,
+      '@typescript-eslint/no-use-before-define': 0,
+      '@typescript-eslint/explicit-member-accessibility': 0,
+      '@typescript-eslint/no-empty-interface': 0,
+      '@typescript-eslint/no-empty-function': 0,
+      '@typescript-eslint/explicit-module-boundary-types': 0,
+      '@typescript-eslint/ban-ts-comment': 0,
+      '@typescript-eslint/no-explicit-any': 2,
+      '@typescript-eslint/ban-types': 0,
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars-experimental': 'warn',
+      'no-unused-vars': 'off',
+      'no-control-regex': 0,
+    },
+  };
+  
+
+```
+
 It tells the ESLint linter to:
 
 * use Typescript parser
@@ -109,7 +168,8 @@ Add the following lines in `package.json`:
 {
   "scripts": {
     "lint": "eslint src/**/*.ts",
-    "format": "eslint src/**/*.ts --fix"
+    "format": "eslint src/**/*.ts --fix",
+    "pretty": "prettier --write \"src/**/*.ts\""
   }
 }
 ```
@@ -174,9 +234,10 @@ Husky does not have its own configuration files. Instead we will add its config 
 {
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint"
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn test"
     }
-  }
+  },
 }
 ```
 
