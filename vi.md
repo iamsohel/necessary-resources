@@ -1,9 +1,10 @@
 # vi filename
 
 ```
-  press i for insert
-  :w - save and continuing
-  press esc  for escape and :wq or ZZ for save and exit
+   press i for insert
+   press esc  for escape
+   :w - save and continuing
+   :wq or ZZ for save and exit
   
 ```
 
