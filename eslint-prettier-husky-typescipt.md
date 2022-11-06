@@ -152,19 +152,20 @@ ESLint does not support typescript out of the box. Fortunately we are able to ad
 .eslintrc.js for node.js
 
 ```
-module.exports = {
+  module.exports = {
     env: {
+      commonjs: true,
+      node: true,
+      browser: true,
       es6: true,
       jest: true,
-      node: true,
     },
     parser: '@typescript-eslint/parser',
     plugins: ['prettier', 'jest'],
     extends: [
-      'eslint:recommended',
-      'plugin:@typescript-eslint/recommended',
+      "plugin:@typescript-eslint/recommended"
     ],
-    parserOptions: { "ecmaVersion": 2018, "sourceType": "module" },
+    parserOptions: { "sourceType": "module", "ecmaVersion": "latest" },
     ignorePatterns: [],
     rules: {
       'prettier/prettier': [
@@ -196,15 +197,16 @@ module.exports = {
       '@typescript-eslint/no-empty-function': 0,
       '@typescript-eslint/explicit-module-boundary-types': 0,
       '@typescript-eslint/ban-ts-comment': 0,
-      '@typescript-eslint/no-explicit-any': 2,
+      '@typescript-eslint/no-explicit-any': 0,
       '@typescript-eslint/ban-types': 0,
       '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars-experimental': 'warn',
+      '@typescript-eslint/no-unused-vars-experimental': 'off',
       'no-unused-vars': 'off',
       'no-control-regex': 0,
+      "import/prefer-default-export": "off",
     },
   };
-  
+
 
 ```
 
@@ -290,12 +292,20 @@ It tells the ESLint linter to:
 * use `Recommended Typescript preset` for linting
 * use `ES2018` and  `module` sourceType to match ts.config settings
 
+add .eslintignore
+
+  ```json
+        node_modules
+        dist
+        logs
+  ```
 Add the following lines in `package.json`:
 
 ```json
 {
   "scripts": {
-    "lint": "eslint src/**/*.ts",
+    "lint": "eslint --max-warnings=0 --cache --cache-location ./.eslintcache ./src --ext .js,.ts -c ./.eslintrc.js",
+    "lint:fix": "eslint --max-warnings=0 --cache --cache-location ./.eslintcache --fix ./src --ext .js,.ts -c ./.eslintrc.js",
     "format": "eslint src/**/*.ts --fix",
     "pretty": "prettier --write \"src/**/*.ts\""
   }
