@@ -8,6 +8,8 @@ $ which docker-compose
 $ docker-compose -v
 docker-compose version 1.27.4, build 40524192
 
+RUN addgroup app && adduser -S -G app app
+
 
 https://mherman.org/presentations/dockercon-2018/#5 ---BEST Practice
 
