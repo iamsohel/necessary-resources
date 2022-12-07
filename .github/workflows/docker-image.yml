@@ -9,9 +9,11 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Setup github config to pull private repositories
+        run: git config --global url."https://${{secrets.PERSONAL_ACCESS_TOKEN_GITHUB_WORKFLOWS_CICD}}@github.com/".insteadOf "https://github.com/"
       -
         name: Set up Docker
         uses: docker/setup-qemu-action@v1
