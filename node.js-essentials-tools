@@ -1,0 +1,23 @@
+21 Common tools / packages NodeJS developers might use on a day-to-day basis in a production application
+
+ 1. Express or NestJS for backend API framework
+ 2. Node-convict and dotenv for configuration management
+ 3. Joi for API request validations or data validations
+ 4. Sequelize/TypeORM for MySQL/Postgres databases, or Mongoose for MongoDb
+ 5. RabbitMQ for publishing/subscribing to message queues, or Kafka for streams and message brokers
+ 6. Ioredis / node-redis for caching with Redis
+ 7. Axios for handling third party API integrations. Need a good command of json API calls and response handling
+ 8. Bull queue or Faktory for delayed/background jobs
+ 9. Socket.io for real time peer to peer connections
+10. Jest/Supertest for unit testing or integration testing and coverage reports
+11. Winston / Morgan for logging (use morgan-body if you want to log request / response, useful for debugging in staging and dev environments)
+12. Passport.js for authentication, or any custom authentication service using cookie-parser, jsonwebtoken or oath
+13. Node-cron for cron jobs
+14. Multer for handling file uploads
+15. Swagger for OpenAPI documentation (swagger-ui-express or @nest/swagger)
+16. Lodash for utilities
+17. Luxon for date time manipulation, especially when dealing with timezones
+18. ESLint + TSLint + Prettier for static code analysis and formatting
+19. Husky for Git hooks
+20. Docker for containerisation (Not NodeJS specific, but it helps)
+21. casl ACL
