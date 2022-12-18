@@ -45,3 +45,5 @@
           }
       }
    ```
+   
+   https://faun.pub/configure-jenkins-ci-cd-with-github-and-deploy-to-server-via-ssh-ade1fdc996fc
