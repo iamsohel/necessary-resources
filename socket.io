@@ -9,6 +9,8 @@ function onConnect(socket){
 
   // sending to all clients except sender
   socket.broadcast.emit('broadcast', 'hello friends!');
+  
+  socket.join(roomId);
 
   // sending to all clients in 'game' room except sender
   socket.to('game').emit('nice game', "let's play a game");
