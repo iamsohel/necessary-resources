@@ -50,6 +50,32 @@ jobs:
                npm install
                npm run build
                pm2 restart api
+               
+---
+name: cicd to local-server
+on:
+  push:
+    branches:
+      - cicd2
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v0.1.8
+      with:
+        host: ${{ secrets.LOCAL_SERVER_HOST }}
+        username: ${{ secrets.LOCAL_SERVER_USERNAME }}
+        password: ${{ secrets.LOCAL_SERVER_PASSWORD }}
+        port: ${{ secrets.LOCAL_SERVER_PORT }}
+        script: |
+          whoami
+          cd test/test
+          sudo git pull origin main
+          sudo make down
+          sudo make u
             
 
 
