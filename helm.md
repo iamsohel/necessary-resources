@@ -1,8 +1,8 @@
-helm create mychars
+helm create mychars == create new charts
 
 helm lint
 
-helm template .
+helm template .   == check helm charts syntax 
 
 helm template . | kubectl apply -f -
 
