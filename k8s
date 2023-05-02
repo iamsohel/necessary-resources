@@ -24,4 +24,6 @@ method 2
 
 kubectl rollout restart deployment client-depl
 
+create secrets:
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdfjasdlfasdjflds
 
