@@ -27,3 +27,7 @@ kubectl rollout restart deployment client-depl
 create secrets:
 kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdfjasdlfasdjflds
 
+see nginx ingress logs
+
+kubectl -n ingress-nginx logs -f -l app.kubernetes.io/instance=ingress-nginx
+
