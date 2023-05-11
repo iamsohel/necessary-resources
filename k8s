@@ -31,3 +31,7 @@ see nginx ingress logs
 
 kubectl -n ingress-nginx logs -f -l app.kubernetes.io/instance=ingress-nginx
 
+delete all resources
+
+kubectl delete all --all --namespace default
+
