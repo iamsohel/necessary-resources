@@ -13,3 +13,5 @@ helm install my-charts2 . -f newValye.yml [for multiple values file]
 helm list
 
 helm uninstall exmple
+
+kubectl delete all --all --namespace default
