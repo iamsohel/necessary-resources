@@ -15,3 +15,6 @@ helm list
 helm uninstall exmple
 
 kubectl delete all --all --namespace default
+
+![image](https://github.com/iamsohel/necessary-resources/assets/9135426/54ef7610-b111-4bf0-ab9f-ac0581712895)
+
