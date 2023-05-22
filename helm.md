@@ -22,5 +22,6 @@ kubectl delete all --all --namespace default
 Grafana Loki
 https://bitnami.com/stack/grafana/helm
 https://grafana.github.io/loki/charts/
-
+https://github.com/leventebalogh/playground-nodejs-loki-grafana/blob/master/server.js
+https://www.youtube.com/watch?v=VEGYgPiAazk
 
