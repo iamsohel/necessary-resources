@@ -19,7 +19,9 @@ kubectl delete all --all --namespace default
 ![image](https://github.com/iamsohel/necessary-resources/assets/9135426/54ef7610-b111-4bf0-ab9f-ac0581712895)
 ![image](https://github.com/iamsohel/necessary-resources/assets/9135426/6ddd3460-f915-4e8c-a61b-d0a54d5f7596)
 
-Grafana Loki
+Monitor
+
+https://bitnami.com/stack/prometheus/helm
 
 https://bitnami.com/stack/grafana/helm
 
