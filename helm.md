@@ -25,6 +25,12 @@ https://bitnami.com/stack/prometheus/helm
 
 https://bitnami.com/stack/grafana/helm
 
+kubectl get secret grafana-admin --namespace default -o jsonpath="{.data.GF_SECURITY_ADMIN_PASSWORD}" | base64 -d)
+```
+echo "User: admin"
+echo "Password: $(kubectl get secret grafana-admin --namespace default -o jsonpath="{.data.GF_SECURITY_ADMIN_PASSWORD}" | base64 -d)"
+```
+
 https://grafana.github.io/loki/charts/
 
 https://github.com/leventebalogh/playground-nodejs-loki-grafana/blob/master/server.js
