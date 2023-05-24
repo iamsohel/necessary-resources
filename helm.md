@@ -21,7 +21,12 @@ kubectl delete all --all --namespace default
 
 Monitor
 
+helm show values prometheus-community/kube-prometheus-stack
+helm show values prometheus-community/kube-prometheus-stack > values.yaml 
+
 https://bitnami.com/stack/prometheus/helm
+
+kubectl edit svc prometheus-server 
 
 https://bitnami.com/stack/grafana/helm
 
