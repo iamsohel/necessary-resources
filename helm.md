@@ -25,6 +25,8 @@ https://bitnami.com/stack/prometheus/helm
 
 https://bitnami.com/stack/grafana/helm
 
+dashboard id: 3119
+
 kubectl get secret grafana-admin --namespace default -o jsonpath="{.data.GF_SECURITY_ADMIN_PASSWORD}" | base64 -d)
 ```
 echo "User: admin"
