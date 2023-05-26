@@ -38,6 +38,7 @@ echo "User: admin"
 echo "Password: $(kubectl get secret grafana-admin --namespace default -o jsonpath="{.data.GF_SECURITY_ADMIN_PASSWORD}" | base64 -d)"
 ```
 
+https://cylab.be/blog/197/deploy-loki-on-kubernetes-and-monitor-the-logs-of-your-pods
 https://grafana.github.io/loki/charts/
 
 https://github.com/leventebalogh/playground-nodejs-loki-grafana/blob/master/server.js
