@@ -21,6 +21,12 @@ kubectl delete all --all --namespace default
 
 Monitor
 
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+helm repo update
+
+helm install prometheus prometheus-community/prometheus
+
 helm show values prometheus-community/kube-prometheus-stack
 helm show values prometheus-community/kube-prometheus-stack > values.yaml 
 
@@ -39,6 +45,7 @@ echo "Password: $(kubectl get secret grafana-admin --namespace default -o jsonpa
 ```
 
 https://cylab.be/blog/197/deploy-loki-on-kubernetes-and-monitor-the-logs-of-your-pods
+
 https://grafana.github.io/loki/charts/
 
 https://github.com/leventebalogh/playground-nodejs-loki-grafana/blob/master/server.js
