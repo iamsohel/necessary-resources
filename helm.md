@@ -37,6 +37,8 @@ kubectl edit svc prometheus-server
 https://bitnami.com/stack/grafana/helm
 
 dashboard id: 3119
+pod overview dashboard: 6781
+https://devops4solutions.com/monitor-kubernetes-cluster-using-prometheus-and-grafana/
 
 kubectl get secret grafana-admin --namespace default -o jsonpath="{.data.GF_SECURITY_ADMIN_PASSWORD}" | base64 -d)
 ```
