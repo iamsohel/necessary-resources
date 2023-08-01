@@ -11,6 +11,8 @@ deactivate
 run inside virtual env
 pip3 freeze > requirements.txt
 
+pipenv --venv
+
 
 pip list
 pip install pipenv
