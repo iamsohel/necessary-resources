@@ -14,6 +14,7 @@ pip3 freeze > requirements.txt
 pipenv --venv
 
 ```
+install microsoft python extension
 ctrl + shirt + p == Format Document, Select Linter
 .vscode-> settings.json {
     "python.linting.pylintArgs": [
@@ -59,6 +60,24 @@ repos:
     -   id: flake8
 default_language_version:
     python: python3.8
+
+
+.flake8
+
+[flake8]
+# https://flake8.pycqa.org/en/latest/user/error-codes.html
+# https://pycodestyle.pycqa.org/en/latest/intro.html#error-codes
+select =
+    F
+    E
+    W1 #Indentation warning
+    W2 #Whitespace warning
+    W6 #Deprecation warning
+    N8
+ignore = E800
+max-line-length = 170
+max-complexity = 18
+exclude = .git,__pycache__,venv/,migrations/
 ```
 
 
