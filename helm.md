@@ -27,7 +27,6 @@ helm repo update
 
 helm install prometheus prometheus-community/prometheus
 
-helm show values prometheus-community/kube-prometheus-stack
 helm show values prometheus-community/kube-prometheus-stack > values.yaml 
 
 https://bitnami.com/stack/prometheus/helm
