@@ -63,3 +63,5 @@ https://devops4solutions.com/monitor-kubernetes-cluster-using-prometheus-and-gra
 
 
 https://www.youtube.com/watch?v=QoDqxm7ybLc
+
+https://www.youtube.com/watch?v=mLPg49b33sA&t=1170s
