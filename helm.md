@@ -60,3 +60,6 @@ kubectl --namespace default port-forward service/loki 3100
 
 
 https://devops4solutions.com/monitor-kubernetes-cluster-using-prometheus-and-grafana/
+
+
+https://www.youtube.com/watch?v=QoDqxm7ybLc
