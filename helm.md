@@ -1,3 +1,5 @@
+kubect apply - ingress.yaml
+
 helm create mychars == create new charts
 
 helm lint
