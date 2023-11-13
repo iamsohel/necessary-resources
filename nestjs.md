@@ -1,3 +1,6 @@
+https://github.com/mguay22
+https://www.youtube.com/watch?v=0WgO3-HVH94&list=PLJ8v-58rML8_p8vCXjoGVCltwhkmgdMVd
+
 1. decoration has no access on di
 2. to access service you have to use interceptor first
 3. handle() will pass the next like express next() function
