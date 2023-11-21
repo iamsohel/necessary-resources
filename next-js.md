@@ -16,3 +16,7 @@
 
 7. caching is only available in fetch() function
 
+8. use no-store cache for dynamic data fetching on every request other wise it will be static data fetching
+    ![image](https://github.com/iamsohel/necessary-resources/assets/9135426/fc117cf8-ea39-4d54-a601-bbe5107ed2fc)
+
+
