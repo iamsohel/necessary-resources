@@ -16,6 +16,7 @@ pipenv install django
 after install django
 
 pipenv shell
+exit --> to exit from shell
 pipenv --venv
 django-admin startproject vidly .
 python manage.py startapp listings
