@@ -9,16 +9,21 @@ python -m venv env
 sourc env_name/bin/activate
 deactivate
 
+---------------
+pip install pipenv
 pipenv install django
 
 after install django
 
-run inside virtual env
-pip3 freeze > requirements.txt
-
 pipenv shell
 django-admin startproject vidly .
 python manage.py startapp listings
+
+python manage.py runserver
+python manage.py runserver 9000
+
+run inside virtual env
+pip3 freeze > requirements.txt
 
 --------------
 python manage.py help
