@@ -2,6 +2,33 @@
 
 export pdf, excel, csv ->>https://www.youtube.com/watch?v=ai9J71DlLhk
 
+python -m venv env
+--for windows only
+.\env\Scripts\activate
+--linux/mac
+sourc env_name/bin/activate
+deactivate
+
+pipenv install django
+
+after install django
+
+run inside virtual env
+pip3 freeze > requirements.txt
+
+pipenv shell
+django-admin startproject vidly .
+python manage.py startapp listings
+
+--------------
+python manage.py help
+python manage.py createsuperuser
+python manage.py runserver
+
+ python manage.py collectstatic(make folder named static(anythings) inside root folder)
+ python manage.py migrate
+ python manage.py makemigrations
+
 .\env\Scripts\activate
 docker-compose up -d  
 docker-compose up -d --build
