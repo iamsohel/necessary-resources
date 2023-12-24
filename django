@@ -24,6 +24,19 @@ python manage.py startapp listings
 python manage.py runserver
 python manage.py runserver 9000
 
+```
+create account app and paste it for extending user model
+
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+
+# Create your models here.
+
+
+class User(AbstractUser):
+    email = models.EmailField(unique=True)
+```
+
 run inside virtual env
 pip3 freeze > requirements.txt
 
