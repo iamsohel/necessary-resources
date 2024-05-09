@@ -41,7 +41,7 @@ def add():
 ### the the below command
 
 ```
-celery -A task_queue worker -l info -P gevent
+celery -A task_queue worker --concurrency=8 -l info -P gevent
 celery -A task_queue beat 
 celery -A task_queue flower 
 ```
