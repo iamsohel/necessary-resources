@@ -6,7 +6,7 @@
 
 ### Necessary Command
 - terraform plan -> to check everything is ok
-- terraform apply -> apply all the changes
+- terraform apply -> apply all the changes [if I apply multiple time, it will run one time, its a declarative approach]
 
 
 ### File Content
