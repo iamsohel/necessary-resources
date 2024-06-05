@@ -5,7 +5,7 @@
 - paste that path in the system env variable path: C:\Terraform
 
 ### Necessary Command
-- terraform plan -> to check everything is ok
+- terraform plan -> to check everything is ok, what the change happen
 - terraform apply -> apply all the changes [if I apply multiple time, it will run one time, its a declarative approach]
 
 
