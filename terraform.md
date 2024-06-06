@@ -5,8 +5,13 @@
 - paste that path in the system env variable path: C:\Terraform
 
 ### Necessary Command
+- terraform init
+- terraform fmt
+- terraform validate ->
 - terraform plan -> to check everything is ok, what the change happen
 - terraform apply -> apply all the changes [if I apply multiple time, it will run one time, its a declarative approach]
+- terraform show [show current state]
+- terraform state list
 
 
 ### File Content
