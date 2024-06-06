@@ -12,6 +12,7 @@
 - terraform apply -> apply all the changes [if I apply multiple time, it will run one time, its a declarative approach]
 - terraform show [show current state]
 - terraform state list
+- terraform destroy
 
 
 ### File Content
