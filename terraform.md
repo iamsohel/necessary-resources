@@ -13,6 +13,7 @@
 - terraform show [show current state]
 - terraform state list
 - terraform destroy
+- terraform output
 
 
 ### File Content
