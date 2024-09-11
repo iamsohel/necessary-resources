@@ -1,0 +1,6 @@
+- green bar - edit mode - press Esc key to turn blue bar for command mode
+- blue bar - command mode - press h to see all keyboard shortcuts
+- press b to insert new cell in below and a for insert cell in above
+- press twice d for deleting a cell
+- tab for getting autocompletion
+- control + / => comments
