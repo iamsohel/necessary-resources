@@ -101,7 +101,7 @@ sudo systemctl status odoo`
 
 1️⃣1️⃣ Access Odoo
 Open:
-
+add custom port in sucurity group 8069
 http://<EC2_PUBLIC_IP>:8069
 You’ll see the Odoo setup screen.
 
