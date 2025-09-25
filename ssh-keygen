@@ -3,3 +3,21 @@
 --- ssh-keygen
 and copy content from id_rsa.pub file and paste into github/gitlab ssh keys section
 
+ssh-keygen -t ed25519 -C "your_email@example.com"
+Replace "your_email@example.com" with the email you use on GitHub.
+
+If your system doesn’t support ed25519, use:
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+You’ll see output like:
+
+
+Copy code
+Enter file in which to save the key (/home/youruser/.ssh/id_ed25519):
+Press Enter to accept the default location.
+
+If asked for a passphrase, you can enter one (recommended) or leave it empty.
+
+2. eval "$(ssh-agent -s)"
+3. ssh-add ~/.ssh/id_ed25519
+4. cat ~/.ssh/id_ed25519.pub
+5. Go to GitHub → Settings → SSH and GPG keys
