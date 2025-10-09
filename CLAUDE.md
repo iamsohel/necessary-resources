@@ -1,0 +1,4 @@
+- prompt: Propose a streaming of message from api response to rendering frontend, then implement the one I pick
+- prompt: Identify the edge cases that are not covered /app/file.py then update the tests to cover these. think hard
+- prompt: commit, push, pr
+- propmt: Use 3 parallel agents to brainstorm ideas for how to clean up file.py
